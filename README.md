@@ -22,7 +22,7 @@ javafx 图形化工具：JavaFX Scene Builder 8.5.0
 
 3、开启服务器防火墙：`systemctl start firewalld`，查看防火墙状态：`systemctl status firewalld`，然后永久开启一下前面在服务器上设置的某个端口：`firewall-cmd --zone=public --add-port=要开放的某个端口（例如3306）/tcp --permanent`，重新载入配置文件： `firewall-cmd --reload`，接下来使用navicat软件连接即可。
 
-4、注意：配置文件设置url=jdbc:mysql://服务器ip:某个端口/数据库名?useSSL=false&characterEncoding=utf-8&autoReconnect=true
+4、注意：配置文件中设置url=jdbc:mysql://服务器ip:某个端口/数据库名?useSSL=false&characterEncoding=utf-8&autoReconnect=true
 
 
 ## 快速上手
@@ -32,7 +32,7 @@ javafx 图形化工具：JavaFX Scene Builder 8.5.0
 
 3、在MySQL连接中创建一个新的数据库；
 
-4、选择创建的数据库并运行项目中的library.sql文件，刷新后即可创建成功；
+4、选择创建的数据库并运行项目中的library.sql文件，右键刷新后即可创建成功；
 
 5、将schoollibrary项目整个文件import到IDEA中，更改一下schoolLibrary\src\main\resources\config\druid.properties文件中的参数，点击运行即可。
 

@@ -2,6 +2,7 @@
 软件工程课程设计-Gdufe图书管理系统
 
 ## 项目说明
+
 本项目采用的是maven项目结构；
 
 编辑器：IDEA 2019.2.4；
@@ -13,6 +14,10 @@ java环境：JDK1.8；
 使用JDBC数据库连接池操作数据库
 
 javafx 图形化工具：JavaFX Scene Builder 8.5.0
+
+需要在Scene Builder图形化工具中导入两个jar包：fontawesomefx-8.9.jar 和 jfoenix-8.0.8.jar
+
+![SceneBuilder导入jfoenix库和图标jar包](SceneBuilder导入jfoenix库和图标jar包.png)
 
 
 ## 可选配置

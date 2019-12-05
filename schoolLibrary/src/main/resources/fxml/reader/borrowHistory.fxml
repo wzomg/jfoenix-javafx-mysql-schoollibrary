@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="600.0" stylesheets="@../../css/nowBorrow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.BorrowHistoryController">
+   <children>
+      <TableView fx:id="bhTable" layoutX="16.0" layoutY="19.0" prefHeight="443.0" prefWidth="568.0">
+        <columns>
+          <TableColumn fx:id="bhBookId" editable="false" prefWidth="88.0" sortable="false" text="书号" />
+          <TableColumn fx:id="bhBookName" editable="false" prefWidth="114.0" sortable="false" text="书名" />
+            <TableColumn fx:id="bhBookAuthor" editable="false" prefWidth="156.0" sortable="false" text="作者" />
+            <TableColumn fx:id="bhBookStart" editable="false" prefWidth="102.0" sortable="false" text="借书时间" />
+            <TableColumn fx:id="bhBookEnd" editable="false" prefWidth="105.0" sortable="false" text="还书时间" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

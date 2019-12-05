@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="rootPane" prefHeight="644.0" prefWidth="694.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.worker.ReviewReturnController">
+    <Label layoutX="1.0" layoutY="3.0" prefHeight="60.0" prefWidth="135.0" styleClass="font-title" text="    审核借阅" textFill="#000000c9" />
+   <TableView fx:id="checkTable" layoutX="36.0" layoutY="113.0" prefHeight="489.0" prefWidth="618.0">
+     <columns>
+       <TableColumn fx:id="rRid" editable="false" prefWidth="145.0" sortable="false" text="读者卡号" />
+       <TableColumn fx:id="rBid" editable="false" prefWidth="125.0" sortable="false" text="书号" />
+         <TableColumn fx:id="rBtime" editable="false" prefWidth="115.0" sortable="false" text="借阅日期" />
+         <TableColumn fx:id="rRtime" editable="false" prefWidth="122.0" sortable="false" text="应还日期" />
+         <TableColumn fx:id="rState" editable="false" prefWidth="110.0" sortable="false" text="状态" />
+     </columns>
+      <contextMenu>
+         <ContextMenu styleClass="fontsize">
+           <items>
+             <MenuItem fx:id="verify" mnemonicParsing="false" onAction="#verifyClick" text="审核通过" />
+               <MenuItem fx:id="breakContract" mnemonicParsing="false" onAction="#breakContractClick" text="违约处理" />
+           </items>
+         </ContextMenu>
+      </contextMenu>
+   </TableView>
+   <Line endX="594.5" layoutX="100.0" layoutY="60.0" startX="-100.0" stroke="#00000063" />
+
+</AnchorPane>

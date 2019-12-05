@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supervisor.CancellationController">
+    <Button fx:id="RcSelect" layoutX="421.0" layoutY="132.0" mnemonicParsing="false" onAction="#RcSelectClick" prefWidth="100.0" text="   查询">
+        <styleClass>
+            <String fx:value="warm-theme" />
+            <String fx:value="btn-radius" />
+         <String fx:value="box" />
+        </styleClass>
+    </Button>
+    <TextField fx:id="inputRaccount" layoutX="51.0" layoutY="134.0" prefHeight="35.0" prefWidth="355.0" promptText="输入账号">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </TextField>
+    <FontAwesomeIconView glyphName="SEARCH" layoutX="433.0" layoutY="157.0" size="18" />
+    <Label layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="145.0" text="  注销借阅证" textFill="#f5be0c">
+        <styleClass>
+            <String fx:value="font-title" />
+            <String fx:value="box" />
+        </styleClass>
+    </Label>
+   <Label fx:id="msg" layoutX="50.0" layoutY="271.0" prefHeight="22.0" prefWidth="477.0" textFill="RED" wrapText="true" />
+   <Label layoutX="51.0" layoutY="195.0" prefHeight="40.0" prefWidth="172.0" text="是否已归还所借图书？">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="warm-theme" />
+      </styleClass></Label>
+   <JFXTextField fx:id="judge" alignment="CENTER" editable="false" layoutX="232.0" layoutY="202.0" prefHeight="34.0" prefWidth="145.0" />
+   <Button fx:id="cancelSure" layoutX="421.0" layoutY="195.0" mnemonicParsing="false" onAction="#cancelSureClick" prefWidth="100.0" text="注销">
+      <styleClass>
+         <String fx:value="warm-theme" />
+         <String fx:value="btn-radius" />
+         <String fx:value="box" />
+      </styleClass>
+   </Button>
+</AnchorPane>

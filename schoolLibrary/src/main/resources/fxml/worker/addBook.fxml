@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="635.0" prefWidth="694.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.worker.AddBookController">
+    <Label layoutX="2.0" layoutY="1.0" prefHeight="60.0" prefWidth="135.0" text="   图书入库" textFill="#000000bd">
+        <styleClass>
+            <String fx:value="font-title" />
+            <String fx:value="btn-radius" />
+        </styleClass>
+    </Label>
+    <JFXTextField id="publisher" fx:id="bookPress" labelFloat="true" layoutX="310.0" layoutY="174.0" prefHeight="34.0" prefWidth="312.0" promptText="出版社" />
+    <JFXTextField id="bookNum" fx:id="bookId" labelFloat="true" layoutX="76.0" layoutY="100.0" prefHeight="30.0" prefWidth="157.0" promptText="书号" />
+    <JFXTextField id="bookName" fx:id="bookName" labelFloat="true" layoutX="314.0" layoutY="103.0" prefHeight="30.0" prefWidth="312.0" promptText="书名">
+      <font>
+         <Font size="16.0" />
+      </font></JFXTextField>
+    <JFXTextField id="author" fx:id="bookAuthor" labelFloat="true" layoutX="74.0" layoutY="171.0" prefHeight="30.0" prefWidth="157.0" promptText="作者" />
+    <JFXTextField id="bookPrice" fx:id="bookPrice" labelFloat="true" layoutX="75.0" layoutY="250.0" prefHeight="34.0" prefWidth="150.0" promptText="价格" />
+   <ComboBox id="bookCategory" fx:id="bookType" layoutX="494.0" layoutY="255.0" prefHeight="34.0" prefWidth="128.0" promptText="图书类别">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+             <String fx:value="图书类别" />
+             <String fx:value="马列毛邓理论" />
+             <String fx:value="哲学、宗教" />
+             <String fx:value="社会科学总论" />
+             <String fx:value="政治、法律" />
+             <String fx:value="军事" />
+             <String fx:value="经济" />
+             <String fx:value="文化、科学、教育、体育" />
+             <String fx:value="语言、文字" />
+             <String fx:value="文学" />
+             <String fx:value="艺术" />
+             <String fx:value="历史、地理" />
+             <String fx:value="自然科学总论" />
+             <String fx:value="数理科学和化学" />
+             <String fx:value="天文学、地球科学" />
+             <String fx:value="生物科学" />
+             <String fx:value="医药、卫生" />
+             <String fx:value="农业科学" />
+             <String fx:value="工业技术" />
+             <String fx:value="交通运输" />
+             <String fx:value="航空、航天" />
+             <String fx:value="环境科学、劳动保护科学" />
+             <String fx:value="综合性图书" />
+         </FXCollections>
+      </items>
+   </ComboBox>
+   <JFXTextArea id="summery" fx:id="bookSummary" labelFloat="true" layoutX="72.0" layoutY="342.0" prefHeight="135.0" prefWidth="556.0" promptText="摘要" styleClass="box" wrapText="true" />
+   <Button id="confirm" fx:id="addSure" layoutX="215.0" layoutY="529.0" mnemonicParsing="false" onAction="#addSureClick" prefWidth="77.0" styleClass="btn-radius" text="确定">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+   <Button id="reset" fx:id="addCancel" layoutX="401.0" layoutY="529.0" mnemonicParsing="false" onAction="#addCancelClick" prefWidth="77.0" styleClass="btn-radius" text="重置">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+   <Label fx:id="labelBookId" layoutX="108.0" layoutY="137.0" prefHeight="30.0" prefWidth="164.0" textAlignment="CENTER" textFill="RED" wrapText="true" />
+   <Label fx:id="lableBookName" layoutX="400.0" layoutY="140.0" prefHeight="30.0" prefWidth="171.0" textFill="RED" wrapText="true" />
+   <Label fx:id="lableIBookAuthor" layoutX="106.0" layoutY="208.0" prefHeight="30.0" prefWidth="171.0" textFill="RED" wrapText="true" />
+   <Label fx:id="labelBookPrice" layoutX="97.0" layoutY="287.0" prefHeight="30.0" prefWidth="115.0" textAlignment="CENTER" textFill="RED" wrapText="true" />
+   <Label fx:id="lableIdBookPress" layoutX="390.0" layoutY="212.0" prefHeight="30.0" prefWidth="157.0" textFill="RED" wrapText="true" />
+   <Label fx:id="labelBookType" layoutX="504.0" layoutY="290.0" prefHeight="30.0" prefWidth="115.0" textAlignment="CENTER" textFill="RED" wrapText="true" />
+   <Label fx:id="lableBookSummary" layoutX="302.0" layoutY="480.0" prefHeight="30.0" prefWidth="115.0" textFill="RED" wrapText="true" />
+   <Label fx:id="lableBookIndate" layoutX="327.0" layoutY="290.0" prefHeight="30.0" prefWidth="115.0" textFill="RED" wrapText="true" />
+   <Line endX="593.5" layoutX="101.0" layoutY="68.0" startX="-100.0" stroke="#00000064" />
+   <DatePicker id="storageDate" fx:id="bookDate" layoutX="307.0" layoutY="256.0" prefHeight="34.0" prefWidth="157.0" promptText="入库日期" />
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

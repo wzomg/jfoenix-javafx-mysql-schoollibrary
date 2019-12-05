@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="updateRPwdMainPane" prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.UpdateRPwdController">
+   <children>
+      <JFXButton fx:id="awRsure" layoutX="185.0" layoutY="317.0" onAction="#awRsureClick" style="-fx-background-color: #41EAC1; -fx-background-radius: 5px;" text="修改">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="awRcancel" layoutX="330.0" layoutY="317.0" onAction="#awRcancelClick" style="-fx-background-color: #41EAC1; -fx-background-radius: 5px;" text="重置">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXPasswordField fx:id="InputOldpwd" labelFloat="true" layoutX="180.0" layoutY="56.0" promptText="旧密码：">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="InputNewpwd" labelFloat="true" layoutX="179.0" layoutY="136.0" promptText="新密码：">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="inputConfirmPwd" labelFloat="true" layoutX="180.0" layoutY="228.0" promptText="确认新密码：">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <Label fx:id="labelMsg" layoutX="179.0" layoutY="273.0" prefHeight="25.0" prefWidth="359.0" textFill="RED">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

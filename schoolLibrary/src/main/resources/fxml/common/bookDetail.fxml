@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="bookDetail" prefHeight="480.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.common.BookDetailController">
+   <children>
+      <Label layoutX="21.0" layoutY="45.0" text="书号：" />
+      <Label layoutX="301.0" layoutY="45.0" text="书名：" />
+      <Label layoutX="20.0" layoutY="99.0" text="作者：" />
+      <Label layoutX="288.0" layoutY="164.0" text="出版社：" />
+      <Label layoutX="300.0" layoutY="100.0" text="价格：" />
+      <Label layoutX="24.0" layoutY="164.0" text="类别：" />
+      <Label layoutX="23.0" layoutY="228.0" text="摘要：" />
+      <TextArea fx:id="bookSummary" editable="false" layoutX="75.0" layoutY="260.0" prefHeight="150.0" prefWidth="450.0" scrollLeft="10.0" scrollTop="10.0" wrapText="true" />
+      <JFXTextField fx:id="bookId" alignment="CENTER" editable="false" layoutX="65.0" layoutY="35.0" prefHeight="35.0" prefWidth="180.0" />
+      <JFXTextField fx:id="bookAuthor" alignment="CENTER" editable="false" layoutX="65.0" layoutY="90.0" prefHeight="35.0" prefWidth="180.0" />
+      <JFXTextField fx:id="bookType" alignment="CENTER" editable="false" layoutX="65.0" layoutY="155.0" prefHeight="35.0" prefWidth="180.0" />
+      <JFXTextField fx:id="bookName" alignment="CENTER" editable="false" layoutX="344.0" layoutY="35.0" prefHeight="35.0" prefWidth="180.0" />
+      <JFXTextField fx:id="bookPrice" alignment="CENTER" editable="false" layoutX="345.0" layoutY="90.0" prefHeight="35.0" prefWidth="180.0" />
+      <JFXTextField fx:id="bookPress" alignment="CENTER" editable="false" layoutX="346.0" layoutY="155.0" prefHeight="35.0" prefWidth="180.0" />
+   </children>
+</AnchorPane>

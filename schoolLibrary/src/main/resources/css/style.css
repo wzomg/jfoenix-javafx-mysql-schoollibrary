@@ -1,0 +1,298 @@
+/*全局字体样式*/
+.root {
+    -fx-font-size: 16px;
+    /*-fx-font-family: "Comic Sans MS";*/
+    /*-fx-text-fill: rgb(110, 110, 110);*/
+
+}
+
+* {
+    -fx-primary: #2A2E37;
+    -fx-secondary: #FFFF8D;
+    -fx-primarytext: #B2B2B2;
+    -fx-blue: #0074cc;
+    -fx-red: #FF0000;
+    -fx-green: #2E7D32;
+}
+
+/*所有按钮基本样式，无需引用就可以生效*/
+.button {
+    /*文本对齐方式*/
+    -fx-text-alignment: left;
+    /*合适高度*/
+    -fx-pref-height: 40px;
+    /*内边距*/
+    -fx-padding: 0 20px;
+    /*无边框*/
+    -fx-border-style: none;
+    /*鼠标样式*/
+    -fx-cursor: HAND;
+    /*边框圆角*/
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/*边框圆角按钮*/
+.btn-radius {
+    -fx-border-radius: 5px;
+    /*-fx-background-radius: 50px;*/
+}
+
+.avatar {
+    -fx-border-radius: 80px;
+    -fx-background-radius: 80px;
+}
+
+/*默认主题*/
+.default-theme {
+    -fx-background-color: #fff;
+    -fx-border-color: rgb(230, 230, 230);
+    -fx-text-fill: rgb(110, 110, 110);
+}
+
+/*深灰色主题*/
+.dark-gray-theme {
+    -fx-background-color: rgb(58, 61, 73);
+}
+
+/*深色主题*/
+.dark-theme {
+    -fx-background-color: rgb(40, 43, 51);
+}
+
+/*绿色主题*/
+/*.green-theme {
+    -fx-background-color: #009688;
+    -fx-text-fill: #fff;
+}*/
+
+/*灰色主题*/
+.gray-theme {
+    -fx-background-color: rgb(210, 210, 210);
+    -fx-text-fill: #fff;
+}
+
+/*警告色主题*/
+.warning-theme {
+    -fx-background-color: rgb(254, 87, 34);
+    -fx-text-fill: #fff;
+}
+
+/*暖色主题*/
+.warm-theme {
+    -fx-background-color: rgb(254, 184, 1);
+    /*-fx-text-fill: #fff;*/
+}
+
+/*蓝色主题*/
+.blue-theme {
+    -fx-background-color: rgb(30, 158, 255);
+    -fx-text-fill: #fff;
+}
+
+/*内容盒子样式，设置一下圆角和内边距*/
+.box {
+    -fx-border-color: rgb(162, 162, 162);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 5 5 5;
+}
+
+
+/*白色字体*/
+.font-white {
+    -fx-text-fill: #fff;
+
+}
+
+/*灰色字体*/
+.font-gray {
+    -fx-text-fill: rgb(121, 111, 118);
+}
+
+/*绿色字体*/
+.font-green {
+    -fx-text-fill: rgb(0, 150, 136)
+}
+
+/*标题字体*/
+.font-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: right;
+    /*-fx-font-family: "Comic Sans MS";*/
+}
+
+/*复选框样式*/
+.check-box .box {
+    -fx-background-color: #fff;
+    -fx-border-color: rgb(230, 230, 230);
+    -fx-border-radius: 3px;
+}
+
+/*复选框文字颜色*/
+.check-box {
+    -fx-text-fill: rgb(121, 111, 118);
+}
+
+/*复选框选中后标记的颜色*/
+.check-box:selected .mark {
+    -fx-background-color: #fff;
+}
+
+/*复选框选中后背景色*/
+.check-box:selected .box {
+    -fx-background-color: rgb(95, 184, 120);
+}
+
+
+/*单选按钮样式*/
+.radio-button .radio {
+    -fx-background-color: #fff;
+    -fx-border-color: rgb(230, 230, 230);
+    -fx-border-radius: 100;
+}
+
+/*单选按钮中间点的颜色*/
+.radio-button:selected .dot {
+    -fx-background-color: #fff;
+}
+
+/*单选按钮选中后背景色*/
+.radio-button:selected .radio {
+    -fx-background-color: rgb(95, 184, 120);
+}
+
+/*表格内容居中显示*/
+.table-view .table-column {
+    -fx-alignment: center;
+}
+
+/*左侧导航菜单按钮样式*/
+.menu-btn {
+    -fx-font-family: "Comic Sans MS";
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-background-color: rgb(40, 43, 51);
+    -fx-text-fill: rgb(191, 192, 194);
+}
+
+/*左侧导航菜单按钮鼠标悬停效果*/
+.menu-btn:hover {
+    -fx-background-color: rgb(95, 184, 120);
+    -fx-text-fill: #fff;
+}
+
+.menu-btn:selected {
+    -fx-background-color: rgb(95, 184, 120);
+    -fx-text-fill: #fff;
+}
+
+/*风琴标题面板字体颜色*/
+.titled-pane {
+    -fx-text-fill: rgb(174, 175, 180);
+}
+
+/*风琴标题面板背景色*/
+.titled-pane > .title {
+    -fx-background-color: rgb(58, 61, 73);
+    -fx-padding: 30 10 10 10;
+}
+
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+}
+
+.hover-change:hover {
+    -fx-opacity: 0.5;
+}
+
+
+.table-view {
+    -fx-border-width: 1px;
+    -fx-border-color: #CACACA;
+    -fx-background-color: transparent;
+}
+
+.table-view:focused {
+    /*-fx-background-color: transparent;*/
+}
+
+.table-view .table-cell {
+    -fx-font-size: 12px;
+}
+
+.table-view .filler {
+    -fx-background-color: #BDE8FF;
+}
+
+.table-view .text {
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3A3D49;
+    /**/
+    -fx-text-fill: white;
+    -fx-pref-height: 40px;
+    -fx-border-width: 1px;
+    -fx-border-color: #D9D9D9;
+    -fx-border-insets: -2px -2px 0px -2px;
+}
+
+.table-view .column-header-background .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 16px;
+}
+
+.table-row-cell {
+    /*行高*/
+    -fx-cell-size: 40px;
+}
+
+.table-row-cell .cell {
+    -fx-alignment: center;
+    -fx-text-fill: black;
+    /*#333333*/
+}
+
+.table-view .table-cell:selected {
+    -fx-text-fill: white;
+}
+
+.table-view .table-column .column-header {
+    -fx-background-color: #363739;
+}
+
+.cell {
+    /*-fx-border-width: 0px 1px 0 0;*/
+    /*-fx-border-color: #CACACA;*/
+}
+
+.table-view .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.viewport {
+    -fx-background-color: white;
+}
+
+
+.welcome-name {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 26px;
+}
+
+.book_num{
+    -fx-font-size: 18px;
+}
+
+/*设置右键菜单字体大小*/
+.fontsize {
+    -fx-font-size: 12px;
+}

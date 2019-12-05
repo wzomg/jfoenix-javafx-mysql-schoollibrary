@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="644.0" prefWidth="694.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.worker.UncomplyController">
+    <Label prefHeight="60.0" prefWidth="135.0" styleClass="font-title" text="    违章记录" textFill="#000000c9" />
+   <TableView fx:id="uncomplyTable" layoutX="25.0" layoutY="106.0" prefHeight="502.0" prefWidth="646.0">
+     <columns>
+         <TableColumn fx:id="uId" prefWidth="75.0" text="序号" />
+       <TableColumn fx:id="uRId" editable="false" prefWidth="116.33331298828125" sortable="false" text="读者卡号" />
+         <TableColumn fx:id="uBId" editable="false" prefWidth="111.66668701171875" sortable="false" text="书号" />
+         <TableColumn fx:id="uSdate" editable="false" prefWidth="101.33331298828125" sortable="false" text="借书日期" />
+         <TableColumn fx:id="uEdate" editable="false" prefWidth="94.3333740234375" sortable="false" text="还书日期" />
+         <TableColumn fx:id="uReason" editable="false" prefWidth="143.0" sortable="false" text="违章原因" />
+     </columns>
+      <contextMenu>
+         <ContextMenu styleClass="fontsize">
+           <items>
+             <MenuItem fx:id="breakDetail" mnemonicParsing="false" onAction="#breakDetailClick" text="违章详情" />
+           </items>
+         </ContextMenu>
+      </contextMenu>
+   </TableView>
+   <Line endX="594.5" layoutX="100.0" layoutY="60.0" startX="-100.0" stroke="#00000063" />
+</AnchorPane>

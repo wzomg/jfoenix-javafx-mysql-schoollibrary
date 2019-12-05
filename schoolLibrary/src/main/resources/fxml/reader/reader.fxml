@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="720.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.ReaderController">
+   <children>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="160.0" prefHeight="720.0" prefWidth="160.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../../css/main.css">
+         <children>
+            <JFXTabPane fx:id="jfxTabPane" layoutY="68.0" onMouseClicked="#tabClick" prefHeight="640.0" prefWidth="900.0" styleClass="familyName">
+               <tabs>
+                  <Tab fx:id="popular" text="热门推荐">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane fx:id="returnStackPane" layoutX="33.0" layoutY="26.0" prefHeight="564.0" prefWidth="797.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="lib_search" text="图书查询">
+                    <content>
+                      <AnchorPane fx:id="librarySearchPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="900.0">
+                           <children>
+                              <MenuButton fx:id="MBbtn" layoutX="90.0" layoutY="25.0" mnemonicParsing="false" text="任意词">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#M11Click" text="任意词" />
+                                  <MenuItem fx:id="MI1" mnemonicParsing="false" onAction="#M1Click" text="书号" />
+                                  <MenuItem fx:id="MI2" mnemonicParsing="false" onAction="#M2Click" text="书名" />
+                                    <MenuItem fx:id="MI3" mnemonicParsing="false" onAction="#M3Click" text="出版社" />
+                                    <MenuItem mnemonicParsing="false" onAction="#M4Click" text="作者" />
+                                    <MenuItem mnemonicParsing="false" onAction="#M44Click" text="分类名" />
+                                </items>
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="18.0" />
+                                 </font>
+                              </MenuButton>
+                              <TextField fx:id="txtf" layoutX="192.0" layoutY="25.0" prefHeight="36.0" prefWidth="355.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <FontAwesomeIconView glyphName="SEARCH" layoutX="572.0" layoutY="51.0" size="18" />
+                              <JFXButton fx:id="searchId" layoutX="547.0" layoutY="25.0" onAction="#searchIdClick" prefHeight="37.0" prefWidth="136.0" text="搜索">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="18.0" />
+                                 </font>
+                              </JFXButton>
+                              <TableView fx:id="bookLook" layoutX="30.0" layoutY="92.0" prefHeight="470.0" prefWidth="801.0">
+                                <columns>
+                                  <TableColumn fx:id="bookIdLook" editable="false" prefWidth="87.0" text="书号" />
+                                  <TableColumn fx:id="bookNameLook" editable="false" prefWidth="125.0" sortable="false" text="书名" />
+                                    <TableColumn fx:id="bookAuthorLook" editable="false" prefWidth="112.0" sortable="false" text="作者" />
+                                    <TableColumn fx:id="bookPressLook" editable="false" prefWidth="121.0" sortable="false" text="出版社" />
+                                    <TableColumn fx:id="bookPriceLook" editable="false" prefWidth="61.0" sortable="false" text="价格" />
+                                    <TableColumn fx:id="bookSummaryLook" editable="false" prefWidth="200.0" sortable="false" text="摘要" />
+                                    <TableColumn fx:id="bookStatusLook" editable="false" prefWidth="92.0" sortable="false" text="书刊状态" />
+                                </columns>
+                                 <contextMenu>
+                                    <ContextMenu styleClass="table-context">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#toBorrowClick" text="点击借阅" />
+                                          <MenuItem mnemonicParsing="false" onAction="#bookDetailClick" text="书籍详情" />
+                                          <MenuItem mnemonicParsing="false" onAction="#reserveClick" text="点击预约" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="returnBook" text="图书归还">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="needToReturn" layoutX="32.0" layoutY="71.0" prefHeight="505.0" prefWidth="796.0">
+                                <columns>
+                                  <TableColumn fx:id="retBookId" editable="false" prefWidth="104.0" sortable="false" text="书号" />
+                                  <TableColumn fx:id="retBookName" editable="false" prefWidth="218.0" sortable="false" text="书名" />
+                                    <TableColumn fx:id="retBookAuthor" editable="false" prefWidth="226.0" sortable="false" text="作者" />
+                                    <TableColumn fx:id="retBookStart" editable="false" prefWidth="130.0" sortable="false" text="借阅时间" />
+                                    <TableColumn fx:id="retBookEnd" editable="false" prefWidth="115.0" sortable="false" text="归还时间" />
+                                </columns>
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#returnBookClick" text="归还书籍" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <JFXHamburger fx:id="hamburger" styleClass="jfx-hamburger-icon" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="150.0" />
+            <AnchorPane prefHeight="69.0" prefWidth="900.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="10.0" prefHeight="50.0" prefWidth="100.0" text="欢迎您：">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="returnToLoginBtn" layoutX="769.0" layoutY="10.0" onAction="#returnToLoginBtnClick" prefHeight="50.0" prefWidth="115.0" styleClass="box" text="    退出" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="accountName" layoutX="137.0" layoutY="10.0" prefHeight="50.0" prefWidth="488.0" text="用户名">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" layoutX="788.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/sign-out.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="accountId" disable="true" layoutX="677.0" layoutY="28.0" visible="false" />
+                  <Label fx:id="rStatus" disable="true" layoutX="459.0" layoutY="28.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

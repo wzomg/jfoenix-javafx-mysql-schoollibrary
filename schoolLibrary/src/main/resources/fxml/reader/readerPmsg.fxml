@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane  prefHeight="720.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.ReaderPmsgController">
+   <children>
+      <Label layoutX="12.0" layoutY="60.0" text="姓名：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="raccount" alignment="CENTER" editable="false" layoutX="92.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="15.0" layoutY="15.0" text="账号：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rname" alignment="CENTER" editable="false" layoutX="91.0" layoutY="65.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="348.0" layoutY="15.0" text="性别：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rsex" alignment="CENTER" editable="false" layoutX="424.0" layoutY="20.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="294.0" layoutY="62.0" text="身份/单位：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="runit" alignment="CENTER" editable="false" layoutX="424.0" layoutY="67.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="302.0" layoutY="107.0" text="注册日期：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="regdate" alignment="CENTER" editable="false" layoutX="424.0" layoutY="112.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="604.0" layoutY="15.0" text="在借册数：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rNum" alignment="CENTER" editable="false" layoutX="725.0" layoutY="20.0" prefHeight="25.0" prefWidth="150.0" />
+      <StackPane fx:id="stackPane" layoutX="20.0" layoutY="234.0" prefHeight="463.0" prefWidth="549.0" />
+      <Label layoutX="606.0" layoutY="62.0" text="最多再借：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rTotal" alignment="CENTER" editable="false" layoutX="724.0" layoutY="67.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="584.0" layoutY="107.0" text="借阅证状态：">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rStatus" alignment="CENTER" editable="false" layoutX="725.0" layoutY="112.0" prefHeight="25.0" prefWidth="150.0" />
+      <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="16.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cat.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="91.0" layoutY="153.0" prefHeight="49.0" prefWidth="203.0" text="历史借阅分类分布" textFill="#428bca">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="601.0" layoutY="395.0" prefHeight="35.0" prefWidth="241.0" progress="0.29" />
+      <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="559.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/analysis.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="628.0" layoutY="174.0" prefHeight="49.0" prefWidth="150.0" text="历史借阅分析" textFill="#428bca">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="596.0" layoutY="246.0" prefHeight="49.0" prefWidth="184.0" text="在所有读者中">
+         <font>
+            <Font name="System" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="328.0" prefHeight="26.0" prefWidth="86.0" text="阅读量排在">
+         <font>
+            <Font name="System" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="180.0" fitWidth="184.0" layoutX="695.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/level.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="756.0" layoutY="476.0" prefHeight="35.0" prefWidth="79.0" text=" 阅读达人" textFill="#ff892a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="progressValue" alignment="CENTER" layoutX="688.0" layoutY="323.0" prefHeight="35.0" prefWidth="68.0" textFill="#ff892a" wrapText="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="761.0" layoutY="329.0" prefHeight="26.0" prefWidth="93.0" text="的人在之前">
+         <font>
+            <Font name="System" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="600.0" stylesheets="@../../css/nowBorrow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.ViolationController">
+   <children>
+      <TableView fx:id="violationTable" layoutX="23.0" layoutY="47.0" prefHeight="411.0" prefWidth="549.0">
+        <columns>
+          <TableColumn fx:id="uBid" editable="false" prefWidth="84.0" sortable="false" text="书号" />
+          <TableColumn fx:id="uBookname" editable="false" prefWidth="154.0" sortable="false" text="书名" />
+            <TableColumn fx:id="usDate" editable="false" prefWidth="105.0" sortable="false" text="借书日期" />
+            <TableColumn fx:id="ueDate" editable="false" prefWidth="101.0" sortable="false" text="应还日期" />
+            <TableColumn fx:id="uReason" editable="false" prefWidth="104.0" sortable="false" text="违章原因" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="uReasonDeatil" mnemonicParsing="false" onAction="#uReasonDeatilClick" text="违章详情" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

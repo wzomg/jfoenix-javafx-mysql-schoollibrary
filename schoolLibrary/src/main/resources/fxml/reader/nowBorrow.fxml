@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="600.0" stylesheets="@../../css/nowBorrow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.NowBorrowController">
+   <children>
+      <TableView fx:id="nBBookView" layoutX="17.0" layoutY="18.0" prefHeight="449.0" prefWidth="571.0">
+        <columns>
+          <TableColumn fx:id="nBBookId" editable="false" prefWidth="112.0" sortable="false" text="书号" />
+            <TableColumn fx:id="nBBookName" editable="false" prefWidth="120.0" sortable="false" text="书名" />
+            <TableColumn fx:id="nBBookAuthor" editable="false" prefWidth="128.0" sortable="false" text="作者" />
+            <TableColumn fx:id="nBBookStart" editable="false" prefWidth="99.0" sortable="false" text="借书日期" />
+            <TableColumn fx:id="nBBookEnd" editable="false" prefWidth="108.0" sortable="false" text="还书日期" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

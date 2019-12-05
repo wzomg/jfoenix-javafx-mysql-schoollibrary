@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="632.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supervisor.AlterWpwController">
+       <TextField fx:id="InputWAccont" layoutX="144.0" layoutY="142.0" prefHeight="35.0" prefWidth="280.0" promptText="输入工作人员账号" />
+    <Button fx:id="awWsure" layoutX="161.0" layoutY="411.0" mnemonicParsing="false" onAction="#awWsureClick" prefWidth="93.0" text="确定">
+        <styleClass>
+            <String fx:value="warm-theme" />
+            <String fx:value="btn-radius" />
+        </styleClass>
+    </Button>
+    <Button fx:id="awWcancel" layoutX="320.0" layoutY="411.0" mnemonicParsing="false" onAction="#awWcancelClick" prefWidth="93.0" text="重置">
+        <styleClass>
+            <String fx:value="warm-theme" />
+            <String fx:value="btn-radius" />
+        </styleClass>
+    </Button>
+   <Label layoutX="15.0" layoutY="15.0" prefHeight="59.0" prefWidth="194.0" text="修改工作人员密码" textFill="#f5be0c">
+      <styleClass>
+         <String fx:value="font-title" />
+         <String fx:value="box" />
+      </styleClass>
+   </Label>
+   <Label fx:id="labelMsg" layoutX="146.0" layoutY="361.0" prefHeight="22.0" prefWidth="379.0" textFill="RED" wrapText="true" />
+   <PasswordField fx:id="InputWpw" layoutX="144.0" layoutY="228.0" prefHeight="34.0" prefWidth="280.0" promptText="输入工作人员新密码" />
+   <PasswordField fx:id="inputConfirmPwd" layoutX="144.0" layoutY="307.0" prefHeight="34.0" prefWidth="280.0" promptText="确认工作人员新密码" />
+</AnchorPane>

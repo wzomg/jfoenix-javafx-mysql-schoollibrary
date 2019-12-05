@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="632.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supervisor.AddReaderController">
+   <Button fx:id="Rsure" layoutX="140.0" layoutY="430.0" mnemonicParsing="false" onAction="#RsureClick" prefWidth="95.0" text="添加">
+      <styleClass>
+         <String fx:value="warm-theme" />
+         <String fx:value="btn-radius" />
+      </styleClass>
+   </Button>
+   <Button fx:id="Rcancel" layoutX="355.0" layoutY="430.0" mnemonicParsing="false" onAction="#RcancelClick" prefWidth="95.0" text="重置">
+      <styleClass>
+         <String fx:value="warm-theme" />
+         <String fx:value="btn-radius" />
+      </styleClass>
+   </Button>
+   <Label layoutX="15.0" layoutY="15.0" prefHeight="59.0" prefWidth="133.0" text="   添加读者" textFill="#f5be0c">
+      <styleClass>
+         <String fx:value="font-title" />
+         <String fx:value="box" />
+      </styleClass>
+   </Label>
+   <HBox layoutX="58.0" layoutY="135.0" spacing="70.0">
+      <children>
+         <TextField fx:id="InputRname" prefWidth="240.0" promptText="输入姓名">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </TextField>
+         <ComboBox fx:id="selectRsex" onAction="#onclickSelectRsex" prefWidth="150.0" promptText="选择性别">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="选择性别" />
+                     <String fx:value="男" />
+                     <String fx:value="女" />
+                 </FXCollections>
+             </items>
+            <effect>
+               <SepiaTone />
+            </effect>
+                 </ComboBox>
+      </children>
+   </HBox>
+   <HBox layoutX="58.0" layoutY="209.0" spacing="70.0">
+      <children>
+         <TextField fx:id="InputRaccount" prefWidth="240.0" promptText="输入账号" />
+         <ComboBox fx:id="selectRunit" onAction="#onClickSelectRUnit" prefWidth="150.0" promptText="选择身份">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="选择身份" />
+                     <String fx:value="学生" />
+                     <String fx:value="教师" />
+                 </FXCollections>
+             </items>
+      
+            <effect>
+               <SepiaTone />
+            </effect>
+         </ComboBox>
+      </children>
+   </HBox>
+   <HBox layoutX="58.0" layoutY="290.0" spacing="70.0">
+      <children>
+         <PasswordField fx:id="InputRpw" prefHeight="35.0" prefWidth="240.0" promptText="输入密码" />
+         <DatePicker fx:id="datePicker" prefHeight="35.0" prefWidth="150.0" />
+      </children>
+   </HBox>
+   <HBox layoutX="60.0" layoutY="173.0" prefWidth="500.0" spacing="70.0">
+      <children>
+         <Label fx:id="lableName" prefHeight="30.0" prefWidth="240.0" textFill="RED" />
+         <Label fx:id="labelSex" prefHeight="30.0" prefWidth="150.0" textAlignment="CENTER" textFill="RED" />
+      </children>
+   </HBox>
+   <HBox layoutX="60.0" layoutY="250.0" prefWidth="500.0" spacing="70.0">
+      <children>
+         <Label fx:id="labelAccount" prefHeight="30.0" prefWidth="240.0" textFill="RED" />
+         <Label fx:id="labelId" prefHeight="30.0" prefWidth="150.0" textAlignment="CENTER" textFill="RED" />
+      </children>
+   </HBox>
+   <HBox layoutX="60.0" layoutY="331.0" prefWidth="500.0" spacing="70.0">
+      <children>
+         <Label fx:id="labelPwd" prefHeight="30.0" prefWidth="240.0" textFill="RED" />
+         <Label fx:id="labelDate" prefHeight="30.0" prefWidth="150.0" textAlignment="CENTER" textFill="RED" />
+      </children>
+   </HBox>
+   <Label fx:id="dataMsg" layoutX="368.0" layoutY="367.0" prefHeight="22.0" prefWidth="150.0" textFill="RED" />
+</AnchorPane>

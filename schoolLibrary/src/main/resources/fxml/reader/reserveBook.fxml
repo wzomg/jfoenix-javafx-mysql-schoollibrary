@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="reserveMainPane" prefHeight="480.0" prefWidth="600.0" stylesheets="@../../css/nowBorrow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.ReserveBookController">
+   <children>
+      <TableView fx:id="qreserveTable" layoutX="21.0" layoutY="23.0" prefHeight="446.0" prefWidth="563.0">
+        <columns>
+          <TableColumn fx:id="qreserveBookId" editable="false" prefWidth="105.0" sortable="false" text="书号" />
+          <TableColumn fx:id="qreserveBookName" editable="false" prefWidth="137.0" sortable="false" text="书名" />
+            <TableColumn fx:id="qreserveStart" editable="false" prefWidth="117.0" sortable="false" text="预约开始日期" />
+            <TableColumn fx:id="qreserveEnd" editable="false" prefWidth="111.0" sortable="false" text="预约到书日期" />
+            <TableColumn fx:id="qreserveStatus" editable="false" prefWidth="91.0" sortable="false" text="预约状态" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#refreshClick" text="刷新表单" />
+                <MenuItem fx:id="cancelReserve" mnemonicParsing="false" onAction="#cancelReserveClick" text="取消预约" />
+                  <MenuItem fx:id="toBorrowBook" mnemonicParsing="false" onAction="#toBorrowBookClick" text="点击借阅" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

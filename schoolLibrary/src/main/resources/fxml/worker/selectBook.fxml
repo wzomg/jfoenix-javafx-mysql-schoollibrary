@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="644.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.worker.SelectBookController">
+    <Button fx:id="rselect" layoutX="466.0" layoutY="102.0" mnemonicParsing="false" onAction="#searchClick" prefWidth="92.0" styleClass="btn-radius" text="   查询">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Button>
+    <MenuButton fx:id="MBbtn" layoutX="80.0" layoutY="104.0" mnemonicParsing="false" text="任意词">
+        <items>
+         <MenuItem fx:id="erveryWord" mnemonicParsing="false" onAction="#erveryWordClick" text="任意词" />
+            <MenuItem fx:id="menuBookid" mnemonicParsing="false" onAction="#menuBookidClick" text="书号" />
+            <MenuItem fx:id="menuBookName" mnemonicParsing="false" onAction="#menuBookNameClick" text="书名" />
+            <MenuItem fx:id="menuPress" mnemonicParsing="false" onAction="#menuPressClick" text="出版社" />
+         <MenuItem fx:id="menuAuthor" mnemonicParsing="false" onAction="#menuAuthorClick" text="作者" />
+         <MenuItem fx:id="menuCata" mnemonicParsing="false" onAction="#menuCataClick" text="分类名" />
+        </items>
+        <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+        </font>
+    </MenuButton>
+    <TextField fx:id="inputRM" layoutX="183.0" layoutY="105.0" prefHeight="35.0" prefWidth="280.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </TextField>
+    <Label layoutY="1.0" prefHeight="60.0" prefWidth="135.0" styleClass="font-title" text="    查询图书" />
+    <FontAwesomeIconView glyphName="SEARCH" layoutX="478.0" layoutY="128.0" />
+   <TableView fx:id="bookLook" layoutX="11.0" layoutY="182.0" prefHeight="442.0" prefWidth="665.0">
+     <columns>
+       <TableColumn fx:id="bookIdLook" editable="false" prefWidth="75.0" sortable="false" text="书号" />
+       <TableColumn fx:id="bookNameLook" editable="false" prefWidth="79.0" sortable="false" text="书名" />
+         <TableColumn fx:id="bookAuthorLook" editable="false" prefWidth="86.0" sortable="false" text="作者" />
+         <TableColumn fx:id="bookPressLook" editable="false" prefWidth="122.0" sortable="false" text="出版社" />
+         <TableColumn fx:id="bookPriceLook" editable="false" prefWidth="74.0" sortable="false" text="价格" />
+         <TableColumn fx:id="bookSummaryLook" editable="false" minWidth="0.0" prefWidth="159.0" sortable="false" text="摘要" />
+         <TableColumn fx:id="bookStatusLook" editable="false" prefWidth="68.0" sortable="false" text="状态" />
+     </columns>
+      <contextMenu>
+         <ContextMenu styleClass="fontsize">
+           <items>
+             <MenuItem mnemonicParsing="false" onAction="#bookDetialClick" text="书籍详情" />
+               <MenuItem mnemonicParsing="false" onAction="#delBookClick" text="删除书籍" />
+           </items>
+         </ContextMenu>
+      </contextMenu>
+   </TableView>
+   <Line endX="573.5" layoutX="107.0" layoutY="62.0" startX="-107.0" stroke="#00000052" />
+
+</AnchorPane>

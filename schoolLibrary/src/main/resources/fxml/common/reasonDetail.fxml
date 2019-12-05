@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookDetail" prefHeight="480.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.common.ReasonDetailController">
+   <children>
+      <JFXTextArea fx:id="reason" editable="false" layoutX="122.0" layoutY="323.0" prefHeight="71.0" prefWidth="384.0" styleClass="box">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font></JFXTextArea>
+      <Label layoutX="139.0" layoutY="43.0" prefHeight="25.0" prefWidth="77.0" text="读者ID:" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="readerId" alignment="CENTER" editable="false" layoutX="223.0" layoutY="37.0" prefHeight="28.0" prefWidth="243.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="139.0" layoutY="104.0" prefHeight="25.0" prefWidth="77.0" text="书籍ID:" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="bookId" alignment="CENTER" editable="false" layoutX="223.0" layoutY="96.0" prefHeight="28.0" prefWidth="243.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="120.0" layoutY="170.0" prefHeight="25.0" prefWidth="96.0" text="借书日期：" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="startTime" alignment="CENTER" editable="false" layoutX="223.0" layoutY="162.0" prefHeight="28.0" prefWidth="243.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="120.0" layoutY="234.0" prefHeight="25.0" prefWidth="96.0" text="还书日期：" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="endTime" alignment="CENTER" editable="false" layoutX="223.0" layoutY="229.0" prefHeight="36.0" prefWidth="243.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="121.0" layoutY="293.0" prefHeight="25.0" prefWidth="96.0" text="违章原因：" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

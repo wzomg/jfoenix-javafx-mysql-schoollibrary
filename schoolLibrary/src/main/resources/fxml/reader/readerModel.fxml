@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reader.ReaderModelController">
+   <children>
+      <JFXButton contentDisplay="TOP" onAction="#loadPersonMsg" prefHeight="120.0" prefWidth="160.0" text="个人信息">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="USER" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" onAction="#loadNowBorrowMsg" prefHeight="120.0" prefWidth="160.0" text="当前借阅">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="TABLE" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" onAction="#loadHistoryBorrowMsg" prefHeight="120.0" prefWidth="160.0" text="借阅历史">
+         <graphic>
+            <FontAwesomeIconView glyphName="BOOKMARK" size="25" />
+         </graphic>
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" onAction="#loadOrderMsg" prefHeight="120.0" prefWidth="160.0" text="预约信息">
+         <graphic>
+            <FontAwesomeIconView glyphName="TAG" size="25" />
+         </graphic>
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" onAction="#loadBreakMsg" prefHeight="120.0" prefWidth="160.0" text="违章记录">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REMOVE" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" onAction="#loadChangPwd" prefHeight="120.0" prefWidth="160.0" text="修改密码">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="KEY" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

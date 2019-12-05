@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anChorPane" prefHeight="720.0" prefWidth="900.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <HBox layoutX="32.0" layoutY="97.0" prefHeight="45.0" prefWidth="320.0">
+         <children>
+            <FontAwesomeIconView glyphName="USER" size="25">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <JFXTextField fx:id="userID" focusColor="#003fff" labelFloat="true" prefHeight="35.0" prefWidth="250.0" promptText="用户名" unFocusColor="#41eac1">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox layoutX="32.0" layoutY="163.0" prefHeight="45.0" prefWidth="320.0">
+         <children>
+            <FontAwesomeIconView glyphName="LOCK" size="25">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <JFXPasswordField fx:id="userPwd" focusColor="#003fff" labelFloat="true" prefHeight="35.0" prefWidth="250.0" promptText="密码" unFocusColor="#41eac1">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXPasswordField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="256.0" prefHeight="65.0" prefWidth="449.0">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/role.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox prefHeight="171.0" prefWidth="161.0">
+               <children>
+                  <JFXRadioButton fx:id="superAdmin" selected="true" text="超级管理员">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="idGroup" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="libStaff" text="工作人员" toggleGroup="$idGroup">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="reader" text="读者" toggleGroup="$idGroup">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </JFXRadioButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="426.0" prefHeight="85.0" prefWidth="287.0">
+         <children>
+            <JFXButton fx:id="loginBtn" onAction="#loginBtnClick" prefHeight="45.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #41EAC1; -fx-background-radius: 5px;" text="登录">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="exitBtn" onAction="#exitBtnClick" prefHeight="45.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #41EAC1; -fx-background-radius: 5px;" text="退出">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox prefHeight="57.0" prefWidth="449.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="572.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/library.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label fx:id="loginMsg" layoutX="77.0" layoutY="226.0" prefHeight="25.0" prefWidth="449.0" textFill="#fc0202">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

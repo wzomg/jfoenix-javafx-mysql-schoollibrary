@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="600.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supervisor.SelectWorkerController">
+    <Button fx:id="Wselect" layoutX="447.0" layoutY="132.0" mnemonicParsing="false" onAction="#wSelect" prefWidth="88.0" text="   搜索">
+        <styleClass>
+            <String fx:value="warm-theme" />
+            <String fx:value="btn-radius" />
+        </styleClass>
+    </Button>
+    <TextField fx:id="inputWM" layoutX="162.0" layoutY="135.0" prefHeight="36.0" prefWidth="280.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </TextField>
+    <FontAwesomeIconView glyphName="SEARCH" layoutX="458.0" layoutY="158.0" size="18" />
+   <Label layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="161.0" text=" 查询工作人员" textFill="#f5be0c">
+      <styleClass>
+         <String fx:value="font-title" />
+         <String fx:value="box" />
+      </styleClass>
+   </Label>
+   <Label fx:id="wId" layoutX="100.0" layoutY="398.0" text=" 工作号  ">
+      <styleClass>
+         <String fx:value="blue-theme" />
+         <String fx:value="box" />
+      </styleClass>
+   </Label>
+   <JFXTextField fx:id="wid" alignment="CENTER" editable="false" layoutX="179.0" layoutY="396.0" prefHeight="30.0" prefWidth="140.0" />
+   <Label fx:id="wPwd" layoutX="352.0" layoutY="254.0" prefHeight="34.0" prefWidth="65.0" text="  密码">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="blue-theme" />
+      </styleClass>
+   </Label>
+   <JFXTextField fx:id="wdate" alignment="CENTER" editable="false" layoutX="431.0" layoutY="396.0" prefHeight="30.0" prefWidth="155.0" />
+   <Label fx:id="wDate" layoutX="347.0" layoutY="398.0" text="入职日期">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="blue-theme" />
+      </styleClass>
+   </Label>
+   <JFXTextField fx:id="wname" alignment="CENTER" editable="false" layoutX="179.0" layoutY="252.0" prefHeight="30.0" prefWidth="135.0" />
+   <JFXTextField fx:id="wpassword" alignment="CENTER" editable="false" layoutX="429.0" layoutY="252.0" prefHeight="30.0" prefWidth="155.0" />
+   <JFXTextField fx:id="wunit" alignment="CENTER" editable="false" layoutX="181.0" layoutY="326.0" prefHeight="30.0" prefWidth="135.0" />
+   <Label fx:id="wName" layoutX="109.0" layoutY="254.0" prefHeight="30.0" prefWidth="65.0" text="  姓名  ">
+      <styleClass>
+         <String fx:value="blue-theme" />
+         <String fx:value="box" />
+      </styleClass>
+   </Label>
+   <Label fx:id="wUnit" layoutX="109.0" layoutY="325.0" prefHeight="31.0" prefWidth="65.0" text="  职务  ">
+      <styleClass>
+         <String fx:value="blue-theme" />
+         <String fx:value="box" />
+      </styleClass>
+   </Label>
+   <Label fx:id="wSex" layoutX="353.0" layoutY="325.0" prefHeight="30.0" prefWidth="65.0" text="  性别">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="blue-theme" />
+      </styleClass>
+   </Label>
+   <JFXTextField fx:id="wsex" alignment="CENTER" editable="false" layoutX="431.0" layoutY="323.0" prefHeight="30.0" prefWidth="155.0" />
+   <Label layoutX="37.0" layoutY="135.0" prefHeight="34.0" prefWidth="122.0" style="-fx-background-radius: 5px;" styleClass="warm-theme" text="  工作人员卡号：" />
+   <Label fx:id="wLabelMsg" layoutX="167.0" layoutY="195.0" textFill="RED" wrapText="true" />
+</AnchorPane>

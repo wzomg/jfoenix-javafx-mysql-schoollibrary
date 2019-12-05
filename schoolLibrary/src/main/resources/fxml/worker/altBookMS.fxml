@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="694.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.worker.AltBookMSController">
+    <Label layoutX="12.0" layoutY="2.0" prefHeight="60.0" prefWidth="135.0" styleClass="font-title" text="修改图书信息">
+      <font>
+         <Font size="18.0" />
+      </font>
+    </Label>
+    <Label layoutX="258.0" layoutY="211.0" prefHeight="34.0" prefWidth="77.0" text=" 出版社*" />
+    <JFXTextField fx:id="alBookPress" alignment="CENTER" layoutX="323.0" layoutY="211.0" prefHeight="34.0" prefWidth="324.0" />
+    <Label layoutX="261.0" layoutY="147.0" prefHeight="30.0" prefWidth="70.0" text="   书名*" />
+    <JFXTextField fx:id="alBookId" alignment="CENTER" editable="false" layoutX="97.0" layoutY="141.0" prefHeight="30.0" prefWidth="135.0" />
+    <JFXTextField fx:id="alBookName" alignment="CENTER" layoutX="321.0" layoutY="141.0" prefHeight="34.0" prefWidth="324.0" />
+    <JFXTextField fx:id="alAuthor" alignment="CENTER" layoutX="98.0" layoutY="214.0" prefHeight="30.0" prefWidth="135.0" />
+    <Label layoutX="38.0" layoutY="144.0" prefHeight="30.0" prefWidth="70.0" text="   书号* " />
+    <Label layoutX="40.0" layoutY="214.0" prefHeight="30.0" prefWidth="70.0" text="   作者* " />
+    <Label layoutX="41.0" layoutY="292.0" prefHeight="30.0" prefWidth="70.0" text="   价格*" />
+    <JFXTextField fx:id="alPrice" alignment="CENTER" layoutX="100.0" layoutY="290.0" prefHeight="34.0" prefWidth="135.0" />
+    <ComboBox fx:id="alBookKind" layoutX="511.0" layoutY="297.0" prefHeight="34.0" prefWidth="135.0" promptText="图书类别">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="图书类别" />
+                <String fx:value="马列毛邓理论" />
+                <String fx:value="哲学、宗教" />
+                <String fx:value="社会科学总论" />
+                <String fx:value="政治、法律" />
+                <String fx:value="军事" />
+                <String fx:value="经济" />
+                <String fx:value="文化、科学、教育、体育" />
+                <String fx:value="语言、文字" />
+                <String fx:value="文学" />
+                <String fx:value="艺术" />
+                <String fx:value="历史、地理" />
+                <String fx:value="自然科学总论" />
+                <String fx:value="数理科学和化学" />
+                <String fx:value="天文学、地球科学" />
+                <String fx:value="生物科学" />
+                <String fx:value="医药、卫生" />
+                <String fx:value="农业科学" />
+                <String fx:value="工业技术" />
+                <String fx:value="交通运输" />
+                <String fx:value="航空、航天" />
+                <String fx:value="环境科学、劳动保护科学" />
+                <String fx:value="综合性图书" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <JFXTextArea fx:id="alSummary" layoutX="102.0" layoutY="379.0" prefHeight="129.0" prefWidth="542.0" styleClass="box" />
+    <Label layoutX="58.0" layoutY="376.0" text="摘要*">
+      <font>
+         <Font size="15.0" />
+      </font></Label>
+    <Label layoutX="250.0" layoutY="301.0" text="入库日期*" />
+   <Button fx:id="bselect" layoutX="503.0" layoutY="86.0" mnemonicParsing="false" onAction="#bSelectClick" prefWidth="92.0" styleClass="btn-radius" text="   搜索">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+   <TextField fx:id="inputBms" layoutX="207.0" layoutY="88.0" prefHeight="35.0" prefWidth="280.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </TextField>
+   <FontAwesomeIconView glyphName="SEARCH" layoutX="518.0" layoutY="112.0" text="" wrappingWidth="15.142857551574707" />
+   <Label fx:id="lableBookId" layoutX="111.0" layoutY="179.0" prefHeight="30.0" prefWidth="171.0" text="书号不能为空" textFill="RED" wrapText="true" />
+   <Label fx:id="labelBookName" layoutX="423.0" layoutY="179.0" prefHeight="30.0" prefWidth="164.0" text="书名不能为空" textAlignment="CENTER" textFill="RED" wrapText="true" />
+   <Label fx:id="lableIBookAuthor" layoutX="112.0" layoutY="252.0" prefHeight="30.0" prefWidth="171.0" text="作者不能为空" textFill="RED" wrapText="true" />
+   <Label fx:id="labelBookPrice" layoutX="111.0" layoutY="327.0" prefHeight="30.0" prefWidth="164.0" text="价格不能为空" textAlignment="CENTER" textFill="RED" wrapText="true" />
+   <Label fx:id="lableIdBookPress" layoutX="417.0" layoutY="249.0" prefHeight="30.0" prefWidth="171.0" text="出版社不能为空" textFill="RED" wrapText="true" />
+   <Label fx:id="labelBookType" layoutX="514.0" layoutY="333.0" prefHeight="30.0" prefWidth="122.0" text="请选择图书类别" textAlignment="CENTER" textFill="RED" wrapText="true" />
+   <Label fx:id="lableBookSummary" layoutX="295.0" layoutY="511.0" prefHeight="30.0" prefWidth="115.0" text="摘要不能为空" textFill="RED" wrapText="true" />
+   <Label fx:id="lableBookIndate" layoutX="350.0" layoutY="332.0" prefHeight="30.0" prefWidth="122.0" text="日期格式错误" textFill="RED" wrapText="true" />
+   <Button fx:id="altSure" layoutX="564.0" layoutY="547.0" mnemonicParsing="false" onAction="#altSureClick" prefWidth="77.0" styleClass="btn-radius" text="修改">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <Line endX="592.0" endY="-7.62939453125E-6" layoutX="101.0" layoutY="67.0" startX="-100.0" stroke="#00000063" />
+   <DatePicker fx:id="alDatePicker" layoutX="334.0" layoutY="297.0" prefHeight="34.0" prefWidth="154.0" />
+   <Label layoutX="140.0" layoutY="98.0" />
+   <Label layoutX="96.0" layoutY="91.0" styleClass="book_num" text="请输入书号:" />
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>

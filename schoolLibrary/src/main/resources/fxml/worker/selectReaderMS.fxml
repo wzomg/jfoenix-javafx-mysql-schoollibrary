@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="694.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.worker.SelectReadermsController">
+    <TextField fx:id="inputRM" layoutX="158.0" layoutY="130.0" prefHeight="36.0" prefWidth="369.0" promptText="请输入读者卡号">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </TextField>
+    <Label layoutX="10.0" layoutY="4.0" prefHeight="60.0" prefWidth="135.0" styleClass="font-title" text="查询读者信息" textFill="#000000c9" />
+   <JFXButton fx:id="nborrowing" layoutX="164.0" layoutY="254.0" onAction="#nborrowingClick" prefHeight="142.0" prefWidth="157.0" text="正在借阅">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="warm-theme" />
+      </styleClass>
+   </JFXButton>
+   <JFXButton fx:id="hreturn" layoutX="361.0" layoutY="254.0" onAction="#hreturnClick" prefHeight="142.0" prefWidth="157.0" text="历史借阅">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="gray-theme" />
+      </styleClass>
+   </JFXButton>
+   <JFXButton fx:id="qreserve" layoutX="167.0" layoutY="374.0" onAction="#qreserveClick" prefHeight="142.0" prefWidth="157.0" text="预约信息">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="blue-theme" />
+      </styleClass>
+   </JFXButton>
+   <JFXButton fx:id="uncomply" layoutX="361.0" layoutY="374.0" onAction="#uncomplyClick" prefHeight="142.0" prefWidth="157.0" text="违章记录">
+      <styleClass>
+         <String fx:value="box" />
+         <String fx:value="warning-theme" />
+      </styleClass>
+   </JFXButton>
+   <FontAwesomeIconView glyphName="SEARCH" layoutX="373.0" layoutY="281.0" text="" />
+   <FontAwesomeIconView glyphName="SEARCH" layoutX="181.0" layoutY="401.0" text="" />
+   <FontAwesomeIconView glyphName="SEARCH" layoutX="373.0" layoutY="401.0" text="" />
+   <FontAwesomeIconView glyphName="SEARCH" layoutX="174.0" layoutY="281.0" text="" />
+   <Line endX="594.0" layoutX="100.0" layoutY="64.0" startX="-100.0" stroke="#00000063" />
+</AnchorPane>

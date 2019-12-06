@@ -120,8 +120,8 @@ public class SelectBookController {
     public void delBookClick() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setHeaderText("WARNING");
-        alert.setContentText("确认删除" + "书名这本书嘛？");
         EmpBookLook bookItem = bookLook.getSelectionModel().getSelectedItem();
+        alert.setContentText("确认删除《" + bookItem.getBName() + "》这本书嘛？");
         System.out.println(bookItem);
         Optional<ButtonType> answer = alert.showAndWait();
         String sql = "DELETE FROM book WHERE BId = ?;";
@@ -136,7 +136,7 @@ public class SelectBookController {
                     data.remove(bookItem);
                 } else {
                     alert.setTitle("删除失败");
-                    alert.setContentText(bookItem.getBName() + "无法被删除。");
+                    alert.setContentText("《" + bookItem.getBName() + "》无法被删除。");
                     alert.show();
                 }
             } else {
@@ -147,7 +147,7 @@ public class SelectBookController {
         } else {
             alert.setAlertType(Alert.AlertType.ERROR);
             System.out.println("书籍被借出，不能删除该书籍");
-            alert.setContentText(bookItem.getBName() + " 此本书已被借出，不能删除它！");
+            alert.setContentText("《" + bookItem.getBName() + "》已被借出，不能删除它！");
             alert.show();
         }
     }

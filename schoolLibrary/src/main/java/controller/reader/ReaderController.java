@@ -174,7 +174,7 @@ public class ReaderController implements Initializable {
     public void tabClick() {
         String sql = null;
         if(jfxTabPane.getSelectionModel().isSelected(0)) {
-            System.out.println("点击热门推荐选项卡");
+            System.out.println("点击·");
             initChartData();
         }
         else if(jfxTabPane.getSelectionModel().isSelected(1)) {
@@ -437,12 +437,18 @@ public class ReaderController implements Initializable {
         String que = "SELECT * FROM book WHERE BCnt > 0 ORDER BY BCnt DESC;";
         List<Map<String, Object>> popularBooks = template.queryForList(que);
         System.out.println(popularBooks.size());
+        int totBorrowCnt = 0;
+        for(int i = 0, len = popularBooks.size(); i < len; ++i) {
+            totBorrowCnt += (int) popularBooks.get(i).get("BCnt");
+        }
+        System.out.println("总的借阅次数为" + totBorrowCnt);
         for(int i = 0, len = popularBooks.size(); i < len; ++i) {
             //最多显示20本热门书籍
             if(i >= 20) break;
             String bpName = (String) popularBooks.get(i).get("BName");
             int bpCnt = (int) popularBooks.get(i).get("BCnt");
-            dataChart.add(new PieChart.Data(bpName + "(" + bpCnt + ")", bpCnt));
+            //使用百分比来展示每本书籍的热度
+            dataChart.add(new PieChart.Data(bpName + "(" + Math.round(1.0 * bpCnt / totBorrowCnt * 100) + "%)", bpCnt));
         }
         return dataChart;
     }

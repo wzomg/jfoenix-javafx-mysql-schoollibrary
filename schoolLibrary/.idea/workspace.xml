@@ -6,8 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +71,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -86,8 +90,14 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1TpYAKrEoYNw4dNJ9Y1A2HJrj8R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -97,6 +107,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
@@ -106,7 +117,7 @@
     <property name="project.structure.proportion" value="0.13632901" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -128,19 +139,13 @@
       <recent name="D:\eclipse_pro\schoolLibrary\src\main\resources\fxml\reader" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -152,12 +157,6 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="controller.Main" />
@@ -220,6 +219,18 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -267,6 +278,7 @@
       <workItem from="1575510905213" duration="5510000" />
       <workItem from="1575524822770" duration="7641000" />
       <workItem from="1575545940356" duration="1915000" />
+      <workItem from="1609777249552" duration="204000" />
     </task>
     <servers />
   </component>
@@ -276,5 +288,35 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1865" height="394" key="GridCell.Tab.0.bottom" timestamp="1609777456796">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="394" key="GridCell.Tab.0.bottom/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777456796" />
+    <state width="1865" height="394" key="GridCell.Tab.0.center" timestamp="1609777456796">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="394" key="GridCell.Tab.0.center/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777456796" />
+    <state width="1865" height="394" key="GridCell.Tab.0.left" timestamp="1609777456796">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="394" key="GridCell.Tab.0.left/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777456796" />
+    <state width="1865" height="394" key="GridCell.Tab.0.right" timestamp="1609777456796">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="394" key="GridCell.Tab.0.right/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777456796" />
+    <state x="371" y="196" key="IDE.errors.dialog" timestamp="1609777347858">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="371" y="196" key="IDE.errors.dialog/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777347858" />
+    <state x="366" y="81" key="SettingsEditor" timestamp="1609777298739">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="366" y="81" key="SettingsEditor/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777298739" />
+    <state x="504" y="188" width="912" height="674" key="find.popup" timestamp="1609777323891">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="504" y="188" width="912" height="674" key="find.popup/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777323891" />
   </component>
 </project>

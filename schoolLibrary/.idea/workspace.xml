@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,6 +277,7 @@
       <workItem from="1575524822770" duration="7641000" />
       <workItem from="1575545940356" duration="1915000" />
       <workItem from="1609777249552" duration="204000" />
+      <workItem from="1609777575771" duration="34000" />
     </task>
     <servers />
   </component>
@@ -314,9 +313,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="366" y="81" key="SettingsEditor/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777298739" />
-    <state x="504" y="188" width="912" height="674" key="find.popup" timestamp="1609777323891">
+    <state x="504" y="188" width="912" height="674" key="find.popup" timestamp="1609777603313">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="504" y="188" width="912" height="674" key="find.popup/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777323891" />
+    <state x="504" y="188" width="912" height="674" key="find.popup/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1609777603313" />
   </component>
 </project>
